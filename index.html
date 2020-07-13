@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Javascript Challenge 3</h1>
+    </div>
+    <div>
+        <p>
+            Lets find the most frequent element in an array
+        </p>
+        <p>const arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]</p>
+    </div>
+    <script>
+        prompt('element that occurs the most and how many times it occured')
+const arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+let mf = 1; // default most frequent number
+let m = 0;  // counter
+let item; //represents the most frequent element
+
+for(let i = 0; i < arr1.length; i++){    // current element
+    for(let j = i; j < arr1.length ; j++){ // loop through other elements to compare with the current element
+        if(arr1[i] === arr1[j])
+        m++;
+        if(mf < m){
+            mf = m;
+            item = arr1[i];
+        }
+    }
+    m = 0;   // made counter 0 for next element
+}
+
+alert(item + " ( " + mf + " times ) ");
+    </script>
+</body>
+</html>
